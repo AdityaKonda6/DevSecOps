@@ -1,0 +1,2422 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Bandit Report
+</title>
+
+<style>
+
+html * {
+    font-family: "Arial", sans-serif;
+}
+
+pre {
+    font-family: "Monaco", monospace;
+}
+
+.bordered-box {
+    border: 1px solid black;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+}
+
+.metrics-box {
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+.metrics-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.issue-description {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.candidate-issues {
+    margin-left: 2em;
+    border-left: solid 1px LightGray;
+    padding-left: 5%;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.issue-block {
+    border: 1px solid LightGray;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.issue-sev-high {
+    background-color: Pink;
+}
+
+.issue-sev-medium {
+    background-color: NavajoWhite;
+}
+
+.issue-sev-low {
+    background-color: LightCyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="metrics">
+    <div class="metrics-box bordered-box">
+        <div class="metrics-title">
+            Metrics:<br>
+        </div>
+        Total lines of code: <span id="loc">94083</span><br>
+        Total lines skipped (#nosec): <span id="nosec">0</span>
+    </div>
+</div>
+
+
+
+
+<br>
+<div id="results">
+    
+<div id="issue-0">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+81	                    )
+82	                except:
+83	                    pass  # Don&#x27;t break if logging fails
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-1">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+152	                    )
+153	                except:
+154	                    pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-2">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+203	                )
+204	            except:
+205	                pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-3">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+230	                    old_instance = self.__class__.objects.get(pk=self.pk)
+231	                except:
+232	                    pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-4">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+256	                )
+257	            except:
+258	                pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-5">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+315	                    )
+316	                except:
+317	                    pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-6">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/decorators.py" target="_blank">./audit/decorators.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+357	                )
+358	            except:
+359	                pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-7">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/middleware.py" target="_blank">./audit/middleware.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+192	            )
+193	        except:
+194	            pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-8">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./audit/middleware.py" target="_blank">./audit/middleware.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+238	            
+239	        except:
+240	            pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-9">
+<div class="issue-block issue-sev-low">
+    <b>try_except_continue: </b> Try, Except, Continue detected.<br>
+    <b>Test ID:</b> B112<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./dashboards/views.py" target="_blank">./dashboards/views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b112_try_except_continue.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b112_try_except_continue.html</a><br>
+
+<div class="code">
+<pre>
+619	                    
+620	            except Exception as e:
+621	                # Silently skip products with errors
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-10">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'Reqdas@6$'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="./gmc_rfq/management/commands/step4.py" target="_blank">./gmc_rfq/management/commands/step4.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+175	                if not UserProfile.objects.filter(email=&quot;dorianmodetechnologies@gmail.com&quot;, is_superuser=True).exists():
+176	                    superuser = UserProfile.objects.create_superuser(
+177	                        email=&quot;dorianmodetechnologies@gmail.com&quot;,
+178	                        user_name=&quot;Super Admin&quot;,
+179	                        password=&quot;Reqdas@6$&quot;,
+180	                    )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-11">
+<div class="issue-block issue-sev-low">
+    <b>try_except_continue: </b> Try, Except, Continue detected.<br>
+    <b>Test ID:</b> B112<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./gmc_rfq/mergesheets.py" target="_blank">./gmc_rfq/mergesheets.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b112_try_except_continue.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b112_try_except_continue.html</a><br>
+
+<div class="code">
+<pre>
+44	            
+45	        except Exception as e:
+46	            continue
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-12">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./mdm/utils.py" target="_blank">./mdm/utils.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+568	                            total += model_class.objects.count()
+569	                        except:
+570	                            pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-13">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./mdm/utils.py" target="_blank">./mdm/utils.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+576	                        total += model_class.objects.count()
+577	                    except:
+578	                        pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-14">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> The pyCrypto library and its module DES are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.<br>
+    <b>Test ID:</b> B413<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b413-import-pycrypto" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b413-import-pycrypto</a><br>
+
+<div class="code">
+<pre>
+25	from base64 import b64decode
+26	from Crypto.Cipher import DES
+27	from Crypto.Util.Padding import unpad
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-15">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> The pyCrypto library and its module unpad are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.<br>
+    <b>Test ID:</b> B413<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b413-import-pycrypto" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b413-import-pycrypto</a><br>
+
+<div class="code">
+<pre>
+26	from Crypto.Cipher import DES
+27	from Crypto.Util.Padding import unpad
+28	from django.contrib.auth.models import Group
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-16">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+820	                            data = ast.literal_eval(data)
+821	                        except Exception:
+822	                            pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-17">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Use of insecure cipher Crypto.Cipher.DES.new. Replace with a known secure cipher such as AES.<br>
+    <b>Test ID:</b> B304<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b304-b305-ciphers-and-modes" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b304-b305-ciphers-and-modes</a><br>
+
+<div class="code">
+<pre>
+4073	        # Create cipher
+4074	        cipher = DES.new(des_key, DES.MODE_CBC, iv)
+4075	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-18">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+4156	                        loc[&#x27;district_name&#x27;] = f&quot;{district.name}, {district.state}&quot;
+4157	                    except:
+4158	                        pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-19">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+4647	                loc[&#x27;district_name&#x27;] = f&quot;{district.name}, {district.state}&quot;
+4648	            except:
+4649	                pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-20">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/all_views.py" target="_blank">./olb_fire/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+4700	                loc[&#x27;district_name&#x27;] = f&quot;{district.name}, {district.state}&quot;
+4701	            except:
+4702	                pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-21">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+129	                # Select users
+130	                created_by = random.choice(fire_sales_users)
+131	                assigned_to = None
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-22">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+132	                if state not in [&#x27;Initialized&#x27;]:
+133	                    assigned_to = random.choice(fire_underwriters) if fire_underwriters else None
+134	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-23">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+135	                # Generate timestamps with realistic gaps
+136	                created_at = timezone.now() - timedelta(days=random.randint(1, 90))
+137	                
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-24">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+140	                    rfq = RFQData.objects.create(
+141	                        rfq_name=f&quot;FIRE{i+1:04d}_{random.choice(company_names).split()[0]}&quot;,
+142	                        fire_product=random.choice([fp[0] for fp in FIRE_PRODUCTS]),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-25">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+141	                        rfq_name=f&quot;FIRE{i+1:04d}_{random.choice(company_names).split()[0]}&quot;,
+142	                        fire_product=random.choice([fp[0] for fp in FIRE_PRODUCTS]),
+143	                        insured_name=random.choice(company_names),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-26">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+142	                        fire_product=random.choice([fp[0] for fp in FIRE_PRODUCTS]),
+143	                        insured_name=random.choice(company_names),
+144	                        state=state,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-27">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+144	                        state=state,
+145	                        type_of_business=random.choice([&#x27;fresh&#x27;, &#x27;renewal&#x27;, &#x27;rollover&#x27;]),
+146	                        created_by=created_by,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-28">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+150	                        # Note: RFQData model doesn&#x27;t have branch field
+151	                        is_otc=random.choice([True, False]),
+152	                        is_urgent=random.choice([True, False, False, False]),  # 25% urgent
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-29">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+151	                        is_otc=random.choice([True, False]),
+152	                        is_urgent=random.choice([True, False, False, False]),  # 25% urgent
+153	                    )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-30">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+335	                &#x27;Initialized&#x27;: timedelta(hours=0),
+336	                &#x27;Assigned&#x27;: timedelta(hours=random.randint(2, 24)),
+337	                &#x27;Approved&#x27;: timedelta(days=random.randint(1, 7)),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-31">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+336	                &#x27;Assigned&#x27;: timedelta(hours=random.randint(2, 24)),
+337	                &#x27;Approved&#x27;: timedelta(days=random.randint(1, 7)),
+338	                &#x27;Negotiate&#x27;: timedelta(days=random.randint(1, 3)),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-32">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+337	                &#x27;Approved&#x27;: timedelta(days=random.randint(1, 7)),
+338	                &#x27;Negotiate&#x27;: timedelta(days=random.randint(1, 3)),
+339	                &#x27;Converted&#x27;: timedelta(days=random.randint(2, 14)),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-33">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+338	                &#x27;Negotiate&#x27;: timedelta(days=random.randint(1, 3)),
+339	                &#x27;Converted&#x27;: timedelta(days=random.randint(2, 14)),
+340	                &#x27;Discrepant&#x27;: timedelta(days=random.randint(1, 5)),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-34">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+339	                &#x27;Converted&#x27;: timedelta(days=random.randint(2, 14)),
+340	                &#x27;Discrepant&#x27;: timedelta(days=random.randint(1, 5)),
+341	                &#x27;Issued&#x27;: timedelta(days=random.randint(1, 10)),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-35">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+340	                &#x27;Discrepant&#x27;: timedelta(days=random.randint(1, 5)),
+341	                &#x27;Issued&#x27;: timedelta(days=random.randint(1, 10)),
+342	            }
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-36">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+356	        &quot;&quot;&quot;Create quote presentation data for RFQ&quot;&quot;&quot;
+357	        num_quotes = random.randint(1, 3)
+358	        
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-37">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+360	            # Generate random premium
+361	            base_premium = Decimal(random.randint(50000, 5000000))
+362	            
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-38">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+369	                selected = False
+370	                sent_to_sales = random.choice([True, False])
+371	            else:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-39">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/generate_fire_analytics_data.py" target="_blank">./olb_fire/management/commands/generate_fire_analytics_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+382	                sent_to_sales=sent_to_sales,
+383	                created_at=rfq.created_at + timedelta(days=random.randint(1, 5)),
+384	            )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-40">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+169	                # Select a random fire sales user for this RFQ
+170	                uploader_user = random.choice(fire_sales_users)
+171	                
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-41">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+172	                # Determine if this RFQ should be OTC eligible
+173	                is_otc_eligible = random.randint(1, 100) &lt;= otc_percentage
+174	                
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-42">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+177	                    # Generate random TSI within the specified range
+178	                    target_total_si = Decimal(random.randint(int(otc_min_tsi), int(otc_max_tsi)))
+179	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-43">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+201	                    # OTC-eligible RFQs typically have simpler covers
+202	                    stfi = random.choice([True, False])  # 50% chance
+203	                    earthquake = random.choice([True, False])  # 50% chance
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-44">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+202	                    stfi = random.choice([True, False])  # 50% chance
+203	                    earthquake = random.choice([True, False])  # 50% chance
+204	                    terrorism = random.choice([True, False])  # 50% chance
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-45">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+203	                    earthquake = random.choice([True, False])  # 50% chance
+204	                    terrorism = random.choice([True, False])  # 50% chance
+205	                    kutcha_construction_loading = False  # Usually not for OTC
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-46">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+209	                    # Regular RFQs: Higher TSI, complex risk profile
+210	                    building_si = Decimal(random.randint(500, 5000)) * 100000  # 5 Cr to 50 Cr
+211	                    plinth_si = Decimal(random.randint(100, 1000)) * 100000   # 1 Cr to 10 Cr
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-47">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+210	                    building_si = Decimal(random.randint(500, 5000)) * 100000  # 5 Cr to 50 Cr
+211	                    plinth_si = Decimal(random.randint(100, 1000)) * 100000   # 1 Cr to 10 Cr
+212	                    plant_si = Decimal(random.randint(1000, 8000)) * 100000   # 10 Cr to 80 Cr
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-48">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+211	                    plinth_si = Decimal(random.randint(100, 1000)) * 100000   # 1 Cr to 10 Cr
+212	                    plant_si = Decimal(random.randint(1000, 8000)) * 100000   # 10 Cr to 80 Cr
+213	                    furniture_si = Decimal(random.randint(50, 500)) * 100000   # 0.5 Cr to 5 Cr
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-49">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+212	                    plant_si = Decimal(random.randint(1000, 8000)) * 100000   # 10 Cr to 80 Cr
+213	                    furniture_si = Decimal(random.randint(50, 500)) * 100000   # 0.5 Cr to 5 Cr
+214	                    contents_si = Decimal(random.randint(200, 2000)) * 100000  # 2 Cr to 20 Cr
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-50">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+213	                    furniture_si = Decimal(random.randint(50, 500)) * 100000   # 0.5 Cr to 5 Cr
+214	                    contents_si = Decimal(random.randint(200, 2000)) * 100000  # 2 Cr to 20 Cr
+215	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-51">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+218	                    max_stock_si = total_other_si * Decimal(&#x27;0.6&#x27;)
+219	                    stock_si = Decimal(random.randint(100, int(max_stock_si / 100000))) * 100000
+220	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-52">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+235	                    # Regular RFQs can have complex covers
+236	                    stfi = random.choice([True, False])
+237	                    earthquake = random.choice([True, False])
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-53">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+236	                    stfi = random.choice([True, False])
+237	                    earthquake = random.choice([True, False])
+238	                    terrorism = random.choice([True, False])
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-54">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+237	                    earthquake = random.choice([True, False])
+238	                    terrorism = random.choice([True, False])
+239	                    kutcha_construction_loading = random.choice([True, False])
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-55">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+238	                    terrorism = random.choice([True, False])
+239	                    kutcha_construction_loading = random.choice([True, False])
+240	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-56">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+243	                    # Basic Information
+244	                    insured_name=random.choice(company_names),
+245	                    risk_location_1=f&quot;{random.choice(cities)}, {random.choice([&#x27;Maharashtra&#x27;, &#x27;Gujarat&#x27;, &#x27;Karnataka&#x27;, &#x27;Tamil Nadu&#x27;, &#x27;Andhra Pradesh&#x27;, &#x27;Rajasthan&#x27;, &#x27;Uttar Pradesh&#x27;, &#x27;West Bengal&#x27;])}&quot;,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-57">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+244	                    insured_name=random.choice(company_names),
+245	                    risk_location_1=f&quot;{random.choice(cities)}, {random.choice([&#x27;Maharashtra&#x27;, &#x27;Gujarat&#x27;, &#x27;Karnataka&#x27;, &#x27;Tamil Nadu&#x27;, &#x27;Andhra Pradesh&#x27;, &#x27;Rajasthan&#x27;, &#x27;Uttar Pradesh&#x27;, &#x27;West Bengal&#x27;])}&quot;,
+246	                    district=random.choice(districts) if districts[0] else None,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-58">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+244	                    insured_name=random.choice(company_names),
+245	                    risk_location_1=f&quot;{random.choice(cities)}, {random.choice([&#x27;Maharashtra&#x27;, &#x27;Gujarat&#x27;, &#x27;Karnataka&#x27;, &#x27;Tamil Nadu&#x27;, &#x27;Andhra Pradesh&#x27;, &#x27;Rajasthan&#x27;, &#x27;Uttar Pradesh&#x27;, &#x27;West Bengal&#x27;])}&quot;,
+246	                    district=random.choice(districts) if districts[0] else None,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-59">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+245	                    risk_location_1=f&quot;{random.choice(cities)}, {random.choice([&#x27;Maharashtra&#x27;, &#x27;Gujarat&#x27;, &#x27;Karnataka&#x27;, &#x27;Tamil Nadu&#x27;, &#x27;Andhra Pradesh&#x27;, &#x27;Rajasthan&#x27;, &#x27;Uttar Pradesh&#x27;, &#x27;West Bengal&#x27;])}&quot;,
+246	                    district=random.choice(districts) if districts[0] else None,
+247	                    occupancy_as_per_system=random.choice(occupancies).occupancy_type if occupancies[0] else &#x27;Manufacturing&#x27;,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-60">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+246	                    district=random.choice(districts) if districts[0] else None,
+247	                    occupancy_as_per_system=random.choice(occupancies).occupancy_type if occupancies[0] else &#x27;Manufacturing&#x27;,
+248	                    business_description=random.choice(business_types),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-61">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/populate_dummy_rfq_data.py" target="_blank">./olb_fire/management/commands/populate_dummy_rfq_data.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+247	                    occupancy_as_per_system=random.choice(occupancies).occupancy_type if occupancies[0] else &#x27;Manufacturing&#x27;,
+248	                    business_description=random.choice(business_types),
+249	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-62">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/management/commands/setup_fire_complete.py" target="_blank">./olb_fire/management/commands/setup_fire_complete.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+917	                    else:
+918	                        otc_eligible = random.choice([True, False])
+919	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-63">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_fire/services/otc_service.py" target="_blank">./olb_fire/services/otc_service.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+253	                    occupancy_name = occ_record.occupancy_type
+254	        except:
+255	            pass  # Use original occupancy if lookup fails
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-64">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./olb_public_liability/all_views.py" target="_blank">./olb_public_liability/all_views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+150	        # else:
+151	        selected_user = random.choice(list(underwriters))
+152	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-65">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+124	                # Generate random dates
+125	                start_date = timezone.now().date() + timedelta(days=random.randint(1, 90))
+126	                end_date = start_date + timedelta(days=365)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-66">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+126	                end_date = start_date + timedelta(days=365)
+127	                exp_start_date = start_date - timedelta(days=365) if random.choice([True, False]) else None
+128	                exp_end_date = exp_start_date + timedelta(days=365) if exp_start_date else None
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-67">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+146	                # Convalescence (checkbox)
+147	                if random.choice([True, False]):
+148	                    benefits_data[&#x27;convalescence_Convalescence&#x27;] = True
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-68">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+150	                # Maternity (radio)
+151	                maternity_choice = random.choice([None, &#x27;with_waiting&#x27;, &#x27;without_waiting&#x27;])
+152	                if maternity_choice == &#x27;with_waiting&#x27;:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-69">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+157	                # Deductibles (dropdown)
+158	                deductible_choice = random.choice([None, &#x27;1_day&#x27;, &#x27;2_days&#x27;, &#x27;3_days&#x27;])
+159	                if deductible_choice == &#x27;1_day&#x27;:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-70">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+166	                # Family Floater (dropdown)
+167	                floater_choice = random.choice([None, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;])
+168	                if floater_choice:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-71">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+178	                }
+179	                selected_ci = random.sample(list(critical_illness_options.keys()), random.randint(0, 3))
+180	                for ci_key in selected_ci:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-72">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+189	                }
+190	                selected_pa = random.sample(list(pa_options.keys()), random.randint(0, 3))
+191	                for pa_key in selected_pa:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-73">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+194	                # Other dropdowns
+195	                pre_hosp_choice = random.choice([None, &#x27;no_coverage&#x27;, &#x27;30_days&#x27;, &#x27;60_days&#x27;, &#x27;90_days&#x27;])
+196	                if pre_hosp_choice == &#x27;no_coverage&#x27;:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-74">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+204	                
+205	                post_hosp_choice = random.choice([None, &#x27;no_coverage&#x27;, &#x27;60_days&#x27;, &#x27;90_days&#x27;, &#x27;120_days&#x27;])
+206	                if post_hosp_choice == &#x27;no_coverage&#x27;:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-75">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+214	                
+215	                room_rent_choice = random.choice([None, &#x27;no_capping&#x27;, &#x27;2000_with_copay&#x27;, &#x27;3000_5000_without_copay&#x27;])
+216	                if room_rent_choice == &#x27;no_capping&#x27;:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-76">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+222	                
+223	                waiting_period_choice = random.choice([None, &#x27;30_days&#x27;, &#x27;2_years&#x27;, &#x27;4_years&#x27;])
+224	                if waiting_period_choice == &#x27;30_days&#x27;:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-77">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+234	                    rfq_name=f&quot;Test RFQ #{i+1}&quot;,
+235	                    company_name=random.choice(company_names),
+236	                    policy_number=f&quot;PS{random.randint(100000, 999999)}&quot;,
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-78">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+235	                    company_name=random.choice(company_names),
+236	                    policy_number=f&quot;PS{random.randint(100000, 999999)}&quot;,
+237	                    product=random.choice([choice[0] for choice in PRODUCT]),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-79">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+236	                    policy_number=f&quot;PS{random.randint(100000, 999999)}&quot;,
+237	                    product=random.choice([choice[0] for choice in PRODUCT]),
+238	                    # branch=None,  # Skip branch for now since it&#x27;s a ForeignKey
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-80">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+238	                    # branch=None,  # Skip branch for now since it&#x27;s a ForeignKey
+239	                    biz_type=random.choice([choice[0] for choice in biz_type]),
+240	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-81">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+241	                    # Location &amp; Business
+242	                    state=random.choice(states),
+243	                    location=random.choice(cities),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-82">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+242	                    state=random.choice(states),
+243	                    location=random.choice(cities),
+244	                    industry=random.choice(industries),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-83">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+243	                    location=random.choice(cities),
+244	                    industry=random.choice(industries),
+245	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-84">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+246	                    # Sales Channel
+247	                    channel=random.choice([choice[0] for choice in channel]),
+248	                    sm_name=random.choice(sm_names),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-85">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+247	                    channel=random.choice([choice[0] for choice in channel]),
+248	                    sm_name=random.choice(sm_names),
+249	                    intermediary=random.choice(intermediaries),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-86">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+248	                    sm_name=random.choice(sm_names),
+249	                    intermediary=random.choice(intermediaries),
+250	                    commission=random.uniform(5.0, 25.0),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-87">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+249	                    intermediary=random.choice(intermediaries),
+250	                    commission=random.uniform(5.0, 25.0),
+251	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-88">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+258	                    # Commercial Parameters
+259	                    acquisition_cost_percent=Decimal(str(random.uniform(10.0, 30.0))),
+260	                    management_expenses_percent=Decimal(str(random.uniform(5.0, 15.0))),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-89">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+259	                    acquisition_cost_percent=Decimal(str(random.uniform(10.0, 30.0))),
+260	                    management_expenses_percent=Decimal(str(random.uniform(5.0, 15.0))),
+261	                    profit_margin_percent=Decimal(str(random.uniform(8.0, 20.0))),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-90">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+260	                    management_expenses_percent=Decimal(str(random.uniform(5.0, 15.0))),
+261	                    profit_margin_percent=Decimal(str(random.uniform(8.0, 20.0))),
+262	                    contingency_margin_percent=Decimal(str(random.uniform(2.0, 8.0))),
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-91">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+261	                    profit_margin_percent=Decimal(str(random.uniform(8.0, 20.0))),
+262	                    contingency_margin_percent=Decimal(str(random.uniform(2.0, 8.0))),
+263	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-92">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+299	                # Randomly create additional workflow transitions for some RFQs (50% chance)
+300	                if random.choice([True, False]) and len(available_users) &gt; 1:
+301	                    # Simulate assignment to underwriter
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-93">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+301	                    # Simulate assignment to underwriter
+302	                    underwriter_user = random.choice([u for u in available_users if u != creator_user])
+303	                    
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-94">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+321	                    # Generate quote variants for assigned RFQs (70% chance)
+322	                    if random.random() &lt; 0.7:
+323	                        # Generate 1-3 quote variants
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-95">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+323	                        # Generate 1-3 quote variants
+324	                        num_variants = random.randint(1, 3)
+325	                        for variant_num in range(num_variants):
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-96">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+325	                        for variant_num in range(num_variants):
+326	                            base_premium = Decimal(str(random.uniform(100000, 500000)))
+327	                            loading_factor = Decimal(str(random.uniform(1.0, 1.3)))
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-97">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+326	                            base_premium = Decimal(str(random.uniform(100000, 500000)))
+327	                            loading_factor = Decimal(str(random.uniform(1.0, 1.3)))
+328	                            office_premium = base_premium * loading_factor
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-98">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./poorna_suraksha/management/commands/generate_test_rfqs.py" target="_blank">./poorna_suraksha/management/commands/generate_test_rfqs.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+345	                    # Small chance (25%) to also mark as submitted for review
+346	                    if random.choice([True, False, False, False]):
+347	                        rfq_transition.in_review = True
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-99">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Consider possible security implications associated with subprocess module.<br>
+    <b>Test ID:</b> B404<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./reports/views.py" target="_blank">./reports/views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess</a><br>
+
+<div class="code">
+<pre>
+2	import json
+3	import subprocess
+4	from django.shortcuts import render
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-100">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Consider possible security implications associated with subprocess module.<br>
+    <b>Test ID:</b> B404<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./reports/views.py" target="_blank">./reports/views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess</a><br>
+
+<div class="code">
+<pre>
+13	import os
+14	import subprocess
+15	import json
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-101">
+<div class="issue-block issue-sev-low">
+    <b>subprocess_without_shell_equals_true: </b> subprocess call - check for execution of untrusted input.<br>
+    <b>Test ID:</b> B603<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./reports/views.py" target="_blank">./reports/views.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html</a><br>
+
+<div class="code">
+<pre>
+36	        ]
+37	        subprocess.run(command, check=True)
+38	    except subprocess.CalledProcessError as e:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-102">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'testpass123'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="./tars/management/commands/test_static_security.py" target="_blank">./tars/management/commands/test_static_security.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+91	        except User.DoesNotExist:
+92	            user = User.objects.create_user(
+93	                email=&#x27;test@example.com&#x27;,
+94	                user_name=&#x27;testuser&#x27;,
+95	                password=&#x27;testpass123&#x27;
+96	            )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-103">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'testpass123'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="./tars/management/commands/test_static_security.py" target="_blank">./tars/management/commands/test_static_security.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+130	        except User.DoesNotExist:
+131	            user = User.objects.create_user(
+132	                email=&#x27;test@example.com&#x27;,
+133	                user_name=&#x27;testuser&#x27;,
+134	                password=&#x27;testpass123&#x27;
+135	            )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-104">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'testpass123'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="./tars/management/commands/test_static_security.py" target="_blank">./tars/management/commands/test_static_security.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+177	        except User.DoesNotExist:
+178	            user = User.objects.create_user(
+179	                email=&#x27;test@example.com&#x27;,
+180	                user_name=&#x27;testuser&#x27;,
+181	                password=&#x27;testpass123&#x27;
+182	            )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-105">
+<div class="issue-block issue-sev-low">
+    <b>hardcoded_password_funcarg: </b> Possible hardcoded password: 'testpass123'<br>
+    <b>Test ID:</b> B106<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>MEDIUM<br>
+    <b>File: </b><a href="./tars/management/commands/test_static_security.py" target="_blank">./tars/management/commands/test_static_security.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html</a><br>
+
+<div class="code">
+<pre>
+224	        except User.DoesNotExist:
+225	            user = User.objects.create_user(
+226	                email=&#x27;test@example.com&#x27;,
+227	                user_name=&#x27;testuser&#x27;,
+228	                password=&#x27;testpass123&#x27;
+229	            )
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-106">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./tars/middleware/auth_required.py" target="_blank">./tars/middleware/auth_required.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+72	                return True
+73	        except:
+74	            pass
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-107">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./tars/middleware/response_security.py" target="_blank">./tars/middleware/response_security.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+82	            response.content = json.dumps(data).encode(&#x27;utf-8&#x27;)
+83	        except:
+84	            pass  # If not valid JSON, skip
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-108">
+<div class="issue-block issue-sev-low">
+    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
+    <b>Test ID:</b> B110<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./tars/middleware/restricted_ip_for_admin.py" target="_blank">./tars/middleware/restricted_ip_for_admin.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
+
+<div class="code">
+<pre>
+40	                return self.get_response(request)
+41	        except:
+42	            pass  # If config fails, continue with restriction
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-109">
+<div class="issue-block issue-sev-low">
+    <b>blacklist: </b> Standard pseudo-random generators are not suitable for security/cryptographic purposes.<br>
+    <b>Test ID:</b> B311<br>
+    <b>Severity: </b>LOW<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>File: </b><a href="./user_management/security_utils.py" target="_blank">./user_management/security_utils.py</a> <br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random</a><br>
+
+<div class="code">
+<pre>
+194	        # Add random delay between 50-150ms
+195	        delay = random.uniform(0.05, 0.15)
+196	        time.sleep(delay)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
