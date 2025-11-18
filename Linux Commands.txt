@@ -1,0 +1,86 @@
+System Info
+
+| Action            | Command    |
+| ----------------- | ---------- |
+| Show OS & version | `uname -a` |
+| Show hostname     | `hostname` |
+| Show date/time    | `date`     |
+| Who is logged in  | `who`      |
+
+File & Directory
+
+| Action                  | Command               |
+| ----------------------- | --------------------- |
+| List files              | `ls`                  |
+| Detailed list           | `ls -l`               |
+| List hidden files       | `ls -a`               |
+| Change directory        | `cd folder/`          |
+| Go back one level       | `cd ..`               |
+| Make directory          | `mkdir test`          |
+| Remove file             | `rm file.txt`         |
+| Remove folder recursive | `rm -r folder/`       |
+| Copy file               | `cp src.txt dest.txt` |
+| Move/rename             | `mv old.txt new.txt`  |
+
+File Content
+
+| Action            | Command           |
+| ----------------- | ----------------- |
+| View file content | `cat file.txt`    |
+| View with pager   | `less file.txt`   |
+| First 10 lines    | `head file.txt`   |
+| Last 10 lines     | `tail file.txt`   |
+| Live follow log   | `tail -f log.txt` |
+
+Search
+
+| Action                   | Command                 |
+| ------------------------ | ----------------------- |
+| Search text inside files | `grep "text" file.txt`  |
+| Search recursively       | `grep -R "text" .`      |
+| Find file by name        | `find / -name file.txt` |
+
+Permissions
+
+| Action             | Command                 |
+| ------------------ | ----------------------- |
+| Show permissions   | `ls -l`                 |
+| Change permissions | `chmod 755 file.sh`     |
+| Change owner       | `chown user:group file` |
+
+Processes
+
+| Action                 | Command        |
+| ---------------------- | -------------- |
+| Show running processes | `ps aux`       |
+| Live process list      | `top`          |
+| Kill process by PID    | `kill 1234`    |
+| Kill forcefully        | `kill -9 1234` |
+
+Networking
+
+| Action           | Command                    |
+| ---------------- | -------------------------- |
+| Show IP          | `ip addr` or `ifconfig`    |
+| Test network     | `ping google.com`          |
+| Check open ports | `netstat -tulpn`           |
+| Check connection | `curl https://example.com` |
+
+Package Management (Ubuntu/Debian)
+
+| Action              | Command                  |
+| ------------------- | ------------------------ |
+| Update package list | `sudo apt update`        |
+| Upgrade system      | `sudo apt upgrade`       |
+| Install package     | `sudo apt install nginx` |
+| Remove package      | `sudo apt remove nginx`  |
+
+Archive / Compress
+
+| Action         | Command                         |
+| -------------- | ------------------------------- |
+| Create tar.gz  | `tar -czvf file.tar.gz folder/` |
+| Extract tar.gz | `tar -xzvf file.tar.gz`         |
+| Zip file       | `zip file.zip file.txt`         |
+| Unzip          | `unzip file.zip`                |
+

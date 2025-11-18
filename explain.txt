@@ -1,0 +1,42 @@
+DOCKERFILE
+-----------------
+Line / Command,Hinglish Style Explanation
+# Stage 1: Build dependencies,"Comment hai, boss! Just telling us this section is for installing all the necessary tools and libraries."
+FROM python:3.11-slim,"Base Image: We're starting with the Python 3.11 image, specifically the slim one. Why slim? Because it's halka (lightweight), keeping the final image size smaller."
+WORKDIR /app/backend,Home Directory: This is where all your app's code will live inside the container. All the next commands will run from this /app/backend folder.
+RUN apt-get update && apt-get install -y --no-install-recommends \ ...,"System Tools: Bohot lambi line hai, but simple hai! This installs all the Linux system dependencies your Python code (and especially tools like wkhtmltopdf for PDF generation) needs. Things like gcc (for compiling C code), graphics libs (libcairo2-dev), and fonts (fonts-dejavu-core) are all included. Finally, it cleans up all the temporary download files (rm -rf /var/lib/apt/lists/*) to keep the image small."
+RUN wget https://github.com/wkhtmltopdf/...,"PDF Generator Fix: This downloads and installs a specific version of wkhtmltopdf. This tool converts HTML to PDF. The special part? This version doesn't have the headache of the old libssl1.1 dependency, making it much easier to run in this slim base image. It downloads, installs (dpkg -i), fixes any missing dependencies (apt-get install -f -y), and then deletes the downloaded file (rm ...deb)."
+RUN python -m venv /app/backend/venv,Virtual Environment: This creates a dedicated space for your Python packages called a venv. It's good practice so your project's libraries don't clash with the system's libraries.
+RUN /app/backend/venv/bin/pip install --upgrade pip,Update Pip: Just updating the Python package manager (pip) inside the venv to the newest version. Standard operating procedure.
+COPY reqs.txt .,Copy Files: Takes your reqs.txt file (where all your project's required Python libraries are listed) from your local computer and puts it into the container.
+RUN /app/backend/venv/bin/pip install --no-cache-dir -r reqs.txt && \ /app/backend/venv/bin/pip install --no-cache-dir pandas,Install Libraries: This uses the venv's pip to install everything listed in reqs.txt. The --no-cache-dir keeps the image clean. And they are installing pandas separately too (maybe it's a critical dependency they want to highlight).
+COPY . .,"Copy Code: Now that all dependencies are installed, this copies all the remaining files from your project folder into the container's working directory (/app/backend)."
+"ENV PATH=""/app/backend/venv/bin:$PATH""","Set Path: This is important! It makes sure that when the container starts, any command (like python or gunicorn) runs using the programs inside your virtual environment, not the system-wide Python."
+ENV DJANGO_SETTINGS_MODULE=tars.settings,"Django Setup: Tells your Django app which settings file to use (tars.settings), which is crucial for connection details, database, etc."
+COPY start.sh /app/backend/start.sh,"Copy Scripts: Copies the start.sh script, which probably contains the actual command to run the web server."
+COPY setup.sh /app/backend/setup.sh,"Copies the setup.sh script, which likely contains commands to run migrations, collect static files, and maybe create a superuser before starting the server."
+EXPOSE 8000 8001,Open Doors: This is just documentation. It tells other developers that this container will listen on ports 8000 and 8001.
+"CMD [""/app/backend/setup.sh""]","The Launch Command: When the container finally starts running, it will execute the setup.sh script. This script will handle initial setup steps and then probably call start.sh to run the web server."
+
+DOCKER-COMPOSE
+--------------------------
+Line / Command,Service,Hinglish Style Explanation
+version: '3.8',"Version: Simple setting, tells Docker Compose which file format version it's using (3.8).",
+services:,Main Section: This is the list of all the different containers (services) that will run together.,
+web:,Web App (Django): This is your main Django application container.,
+build: context: .,Build From Here: Tells Docker Compose to build the image for this service using the files in the current folder (.).,
+dockerfile: Dockerfile,Use This Recipe: Specifies that the build process should use the Dockerfile you just read.,
+container_name: gsquare,"Name Tag: Gives the container a friendly, easy-to-remember name: gsquare.",
+env_file: - .env,"Secret Ingredients: Loads all environment variables (like API keys, DB credentials) from a local file named .env. Achha practice hai!",
+depends_on: - db,"Wait for DB: This is a gentle instruction: ""Bhai, pehle db service ko chalu hone do, fir main start hounga."" It ensures the database is attempting to start before the web app tries to connect.",
+"ports: - ""8000:8000""",Public Access: Maps port 8000 on your local machine (host) to port 8000 inside the container. This lets you access your app from your browser.,
+volumes: - /mnt/efs/static:/mnt/efs/static,"Shared Storage: Yeh thoda advanced hai! It mounts a directory (/mnt/efs/static) from the host (probably an EFS shared network drive, typically used in AWS) directly into the container. This is where Django will put all its collected static files. Same thing for /mnt/efs/media.",
+db:,Database Service (Postgres): This is the database container.,
+image: postgres:latest,"Ready-made Image: Instead of building a custom image, it just pulls the latest official PostgreSQL image.",
+container_name: postgres-db-gsquare,Name Tag: Gives the database container a specific name.,
+volumes: - postgres_data:/var/lib/postgresql/data,"Data Persistence: This is crucial! It uses a Docker volume named postgres_data to store the actual database files. So even if you stop or destroy the container, your data remains safe.",
+"ports: - ""5433:5432""","DB Port: Maps the standard PostgreSQL port 5432 inside the container to port 5433 on your local machine. This lets you connect to the database from outside the container, if needed.",
+deploy: resources: limits/reservations:,Resource Management: This specifies how much CPU and Memory the DB container should reserve (guarantee) and how much it should be limited to use. This is common in production environments.,
+environment: - POSTGRES_DB=gsquare_db ...,"DB Credentials: Sets the essential environment variables for the Postgres container, defining the database name, user, and password for initial setup.",
+command: > postgres -c shared_buffers=512MB ...,"Performance Tuning: This overrides the default startup command for Postgres to add specific performance configuration parameters (like shared_buffers, work_mem) to make the database run more efficiently.",
+volumes: postgres_data:,"Volume Definition: Finally, this section at the bottom defines the postgres_data volume we used earlier."

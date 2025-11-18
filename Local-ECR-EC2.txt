@@ -1,0 +1,80 @@
+DOCKERFILE
+DOCKERCOMPOSE
+SETTINGS.PY
+.DOCKERIGNORE
+.ENV
+ENTRYPOINT.SH or SETUP.SH
+REQUIREMENTS.TXT
+
+
+
+
+Now after completing the setup in local run it in local on docker with :- 
+docker-compose up -d --build
+docker-compose down
+
+
+
+
+
+If Successfully installed and runned on local machine now install aws cli:-
+LINUX
+----------------
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+-----------------
+WINDOWS
+-----------------
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+-----------------
+aws --version
+
+
+
+
+
+Then After successful install then install docker and sudo update
+-------------
+    sudo apt-get update
+    sudo apt-get install ca-certificates curl gnupg
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+
+
+
+
+Open CloudShell and click on Upload file and then upload the .zip file then unzip the file using "unzip myproject.zip" after that go to the main folder where dockerfile is present and enter below steps to push the image into the ECR
+
+
+
+
+
+Then goto AWS ECR and create a repository and then click on that repository and click on view push commands 
+for ex:- 
+
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 534232118663.dkr.ecr.us-east-1.amazonaws.com
+
+docker build -t newproject .
+
+docker tag newproject:latest 534232118663.dkr.ecr.us-east-1.amazonaws.com/newproject:latest
+
+docker push 534232118663.dkr.ecr.us-east-1.amazonaws.com/newproject:latest
+
+
+
+
+
+
+
+Then create EC2 instance and connect it with SSH on you local cmd,
+then login using aws ecr to pull from the AWS ECR 
+Ex:- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 534232118663.dkr.ecr.us-east-1.amazonaws.com
+
+
+Then use command "sudo docker pull "Image URI""
+for ex:- sudo docker pull 534232118663.dkr.ecr.us-east-1.amazonaws.com/newproject:latest
+
+
+Then the image is pulled to the AWS EC2<-AWS ECR<-Local Machine Image

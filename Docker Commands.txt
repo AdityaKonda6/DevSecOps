@@ -1,0 +1,74 @@
+Docker Basics
+
+| Action               | Command            |
+| -------------------- | ------------------ |
+| Check Docker version | `docker --version` |
+| Check system info    | `docker info`      |
+| Show all Docker help | `docker --help`    |
+
+Docker Images
+
+| Action                         | Command                            |
+| ------------------------------ | ---------------------------------- |
+| List images                    | `docker images`                    |
+| Pull an image from Docker Hub  | `docker pull <image>`              |
+| Build an image from Dockerfile | `docker build -t <name> .`         |
+| Tag an image                   | `docker tag <image> <newname:tag>` |
+| Remove an image                | `docker rmi <image>`               |
+| Remove unused images           | `docker image prune`               |
+
+Docker Containers
+
+| Action                            | Command                         |
+| --------------------------------- | ------------------------------- |
+| List **running** containers       | `docker ps`                     |
+| List **all** containers           | `docker ps -a`                  |
+| Run a container                   | `docker run <image>`            |
+| Run in background (detached)      | `docker run -d <image>`         |
+| Run + map port                    | `docker run -p 8080:80 <image>` |
+| Start a stopped container         | `docker start <container>`      |
+| Stop a running container          | `docker stop <container>`       |
+| Restart container                 | `docker restart <container>`    |
+| Remove container                  | `docker rm <container>`         |
+| Remove **all stopped** containers | `docker container prune`        |
+
+Docker Inside Containers
+
+| Action                              | Command                                  |
+| ----------------------------------- | ---------------------------------------- |
+| Run a shell inside container        | `docker exec -it <container> sh`         |
+| Exec bash (if available)            | `docker exec -it <container> bash`       |
+| View logs                           | `docker logs <container>`                |
+| Follow live logs                    | `docker logs -f <container>`             |
+| Copy file **from host → container** | `docker cp file.txt <container>:/path/`  |
+| Copy file **from container → host** | `docker cp <container>:/path/file.txt .` |
+
+Volumes & Networks
+
+| Action                 | Command                |
+| ---------------------- | ---------------------- |
+| List volumes           | `docker volume ls`     |
+| Remove unused volumes  | `docker volume prune`  |
+| List networks          | `docker network ls`    |
+| Remove unused networks | `docker network prune` |
+
+Clean Up
+
+| Action                                         | Command                            |
+| ---------------------------------------------- | ---------------------------------- |
+| Remove **stopped** containers                  | `docker container prune`           |
+| Remove **dangling** images                     | `docker image prune`               |
+| Remove **unused** images, containers, networks | `docker system prune`              |
+| Remove **everything incl. volumes** ⚠️         | `docker system prune -a --volumes` |
+
+Docker Compose (multi-container)
+
+| Action                | Command                |
+| --------------------- | ---------------------- |
+| Start services        | `docker compose up`    |
+| Start in background   | `docker compose up -d` |
+| Stop and remove       | `docker compose down`  |
+| Rebuild images        | `docker compose build` |
+| View running services | `docker compose ps`    |
+| View logs             | `docker compose logs`  |
+

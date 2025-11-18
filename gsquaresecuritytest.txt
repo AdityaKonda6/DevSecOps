@@ -1,0 +1,61 @@
+********IMAGE SCANNING USING (TRIVY)**********
+------------------------------------------------------------
+1. Pull Trivy Docker Image
+docker pull aquasec/trivy:latest
+
+2. Scan Your Docker Image Using Trivy Container
+Assume your image name is:
+gsquare-web
+Run:
+docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    aquasec/trivy:latest image gsquare-web
+
+3. Now download the official HTML template into the current directory (this will create a file named html.tpl):
+
+curl -LO https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/html.tpl
+
+Verify it’s a file:
+        ls -la html.tpl
+        file html.tpl
+
+4. Docker command and also generate html report.
+        sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/html.tpl:/html.tpl -v $(pwd):/output aquasec/trivy:latest image --format template --template @/html.tpl -o /output/trivy-report.html gsquare-web
+        
+--------------------------------------------------------------------------------------------
+********SAST(STATIC APPLICATION SECURITY TESTING) WE ARE USING (BANDIT)*************
+1.Install with pip (recommended)
+        # If you use a virtualenv:
+        python -m pip install --upgrade pip
+        pip install bandit
+        # confirm
+        bandit --version
+2. Basic usage — scan a project and produce HTML
+        Assume your project root (where Python code lives) is app/backend or just the current directory ..
+        Local (installed via pip)
+        # scan recursively from current dir, output HTML
+
+        bandit -r . -f html -o bandit-report.html
+Optionl. 
+        Run an example on your repo (recommendation)
+        From your project root:
+        Make sure venv and node_modules (if present) are excluded.
+        Run:
+        # safe command to produce HTML, skipping venv and large files
+
+        bandit -r . -f html -o bandit-report.html --exclude venv,__pycache__,node_modules,app/backend/company_master.csv
+
+--------------------------------------------------------------------------------------------
+********DAST(DYNAMIC APPLICATION SECURITY TESTING) WE ARE USING (OWASP ZAP)*************
+1. Docker image (no install required)
+We’ll use the official image:
+        docker pull zaproxy/zap-stable
+
+2. Why pick this: no DNS/host tricks needed, works on Docker Desktop + WSL, and uses the exact same localhost endpoints as nginx.
+
+    docker run --rm \
+  --network container:nginx-gsquare \
+  -v "$(pwd)":/zap/wrk:rw \
+  zaproxy/zap-stable \
+  zap-full-scan.py -t http://localhost -r /zap/wrk/zap_report.html
+

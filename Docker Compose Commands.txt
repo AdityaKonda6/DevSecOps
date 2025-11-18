@@ -1,0 +1,17 @@
+Docker Compose Commands
+
+| Action                              | Command                      |
+| ----------------------------------- | ---------------------------- |
+| Start services                      | `docker compose up`          |
+| Start in background                 | `docker compose up -d`       |
+| Stop & remove containers            | `docker compose down`        |
+| View running services               | `docker compose ps`          |
+| View logs                           | `docker compose logs`        |
+| Live logs (follow)                  | `docker compose logs -f`     |
+| Restart all services                | `docker compose restart`     |
+| Rebuild images                      | `docker compose build`       |
+| Rebuild & start                     | `docker compose up --build`  |
+| Start only 1 service                | `docker compose up app`      |
+| Exec into container                 | `docker compose exec app sh` |
+| Remove stopped containers & volumes | `docker compose down -v`     |
+
